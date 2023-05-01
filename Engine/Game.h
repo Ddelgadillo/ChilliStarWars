@@ -38,6 +38,7 @@ private:
 	/*  User Functions              */
 	void DrawMando(float x, float y, float width, float height);
 	void DrawBlaster(float x, float y, float width, float height);
+	void DrawIntro(float x, float y, float width, float height);
 	void ScreenBoundary(float& x, float& y, float width, float height);
 	void MoveMando(float& x, float& y);
 	bool BoxCollision(float& x1, float& y1, float& x2, float& y2, float width1, float height1, float width2, float height2);
@@ -46,7 +47,8 @@ private:
 	MainWindow& wnd;
 	Graphics gfx;
 	/********************************/
-	/*  User Variables              */
+	/*  User Variables   */
+	//Mandalorian
 	float mandoPosX;
 	float mandoPosY;
 	const float mandoWidth;
@@ -56,6 +58,12 @@ private:
 	float blasterPosY;
 	const float blasterWidth;
 	const float blasterHeight;
+	//Splash Intro
+	float introPosX;
+	float introPosY;
+	const float introHeight;
+	const float introWidth;
 	bool isBlasterCollected = false;
+	bool gameStarted = false;
 	/********************************/
 };
